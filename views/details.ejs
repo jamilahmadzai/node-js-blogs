@@ -8,12 +8,18 @@
       <div class="content">
         <p><%=blog.body%></p>
       </div>
-      <a class="delete" data-doc="<%= blog._id %>">delete</a>
+      <a class="delete" data-doc="<%= blog._id %>"
+        ><i class="fas fa-trash-alt"></i
+      ></a>
     </div>
 
     <%- include('./partials/footer.ejs')%>
 
-    <script>
+    <script
+      src="https://kit.fontawesome.com/931dff811c.js"
+      crossorigin="anonymous"
+    >
+
       const dlt = document.querySelector("a.delete");
 
       dlt.addEventListener("click", (e) => {
